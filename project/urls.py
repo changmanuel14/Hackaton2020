@@ -15,7 +15,25 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from app.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('getPersonas/', getAllPersonas.as_view()),
+    path('getPaises/', getAllPais.as_view()),
+    path('getDepartamentos/', getAllDepartamento.as_view()),
+    path('getMunicipio/', getAllMunicipio.as_view()),
+    path('getGeneroNum/', getPersonaGenero.as_view()),
+    path('getFemenino/', getFemenino.as_view()),
+    path('getMasculino/', getMasculino.as_view()),
+    path('getPersonasPais/', getPersonasPais.as_view()),
+    path('getPersonasEdad/', getPersonasEdad.as_view()),
+    path('getPersonaPais/', getPais.as_view()),
+    path('getPersonaDepartamento/', getDepartamento.as_view()),
+    path('getPersonaMunicipio/', getMunicipio.as_view()),
+    path('newPersona/', NewPersona.as_view()),
+
+
+
+
 ]
