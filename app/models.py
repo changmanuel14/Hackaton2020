@@ -8,6 +8,7 @@ class Departamento(models.Model):
 
 class Municipio(models.Model):
     nombre = models.CharField(max_length=100)
+    departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE)
 
 class Persona(models.Model):
     nombre = models.CharField(max_length=100)
